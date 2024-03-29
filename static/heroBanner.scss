@@ -11,12 +11,13 @@ body, html{ div.screen{ div.page{ &.heroBanner{
                         justify-content: space-between;
                         align-items: center;
                         background-color: var(--header-color);
-                        div.logo{
+                        div.banner{
                             height: 90%;
-                            aspect-ratio: 1 / 1;
+                            aspect-ratio: 3 / 1;
                             margin-left: var(--border-radius-medium);
                             img{
-                                object-fit: contain;
+                                object-fit: cover;
+                                border-radius: var(--border-radius-light);
                             }
                         }
                         div.tabs{
@@ -131,9 +132,13 @@ body, html{ div.screen{ div.page{ &.heroBanner{
                     grid-auto-rows: minmax(100px, auto);
                     width: 90%;
                     height: 85%;
+                    &:has(div.box:hover) > div.box:not(:hover) div.overlay {
+                        opacity: 1;
+                    }
                     div.box{
                         border-radius: var(--border-radius-medium);
                         background-color: var(--secondary-color);
+                        transition: transform var(--soft-animation-delay) ease-in-out;
                         &.one{
                             grid-column: 1 / 3;
                             grid-row: 1;
@@ -149,6 +154,15 @@ body, html{ div.screen{ div.page{ &.heroBanner{
                         &.four{
                             grid-column: 2 / 4;
                             grid-row: 2;
+                        }
+                        div.overlay{
+                            width: 100%;
+                            height: 100%;
+                            border-radius: inherit;
+                            background-color: rgba($color: #000000, $alpha: 0.5);
+                            opacity: 0;
+                            pointer-events: none;
+                            transition: opacity var(--soft-animation-delay) ease-in-out;
                         }
                     }
                 }

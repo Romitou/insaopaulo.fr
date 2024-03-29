@@ -8,13 +8,15 @@ body div.screen div.page.heroBanner div.section.heroBanner div.container.header,
   align-items: center;
   background-color: var(--header-color);
 }
-body div.screen div.page.heroBanner div.section.heroBanner div.container.header div.logo, html div.screen div.page.heroBanner div.section.heroBanner div.container.header div.logo {
+body div.screen div.page.heroBanner div.section.heroBanner div.container.header div.banner, html div.screen div.page.heroBanner div.section.heroBanner div.container.header div.banner {
   height: 90%;
-  aspect-ratio: 1/1;
+  aspect-ratio: 3/1;
   margin-left: var(--border-radius-medium);
 }
-body div.screen div.page.heroBanner div.section.heroBanner div.container.header div.logo img, html div.screen div.page.heroBanner div.section.heroBanner div.container.header div.logo img {
-  object-fit: contain;
+body div.screen div.page.heroBanner div.section.heroBanner div.container.header div.banner img, html div.screen div.page.heroBanner div.section.heroBanner div.container.header div.banner img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: var(--border-radius-light);
 }
 body div.screen div.page.heroBanner div.section.heroBanner div.container.header div.tabs, html div.screen div.page.heroBanner div.section.heroBanner div.container.header div.tabs {
   position: absolute;
@@ -29,7 +31,9 @@ body div.screen div.page.heroBanner div.section.heroBanner div.container.header 
 body div.screen div.page.heroBanner div.section.heroBanner div.container.header div.tabs p.tab, html div.screen div.page.heroBanner div.section.heroBanner div.container.header div.tabs p.tab {
   text-decoration: underline;
   text-decoration-color: transparent;
+  transition: -webkit-text-decoration var(--soft-animation-delay) ease-in-out;
   transition: text-decoration var(--soft-animation-delay) ease-in-out;
+  transition: text-decoration var(--soft-animation-delay) ease-in-out, -webkit-text-decoration var(--soft-animation-delay) ease-in-out;
 }
 body div.screen div.page.heroBanner div.section.heroBanner div.container.header div.tabs p.tab:hover, html div.screen div.page.heroBanner div.section.heroBanner div.container.header div.tabs p.tab:hover {
   text-decoration-thickness: 2px;
@@ -59,6 +63,7 @@ body div.screen div.page.heroBanner div.section.heroBanner div.container.present
   top: 50%;
   left: 10%;
   transform: translateY(-50%);
+  width: -moz-min-content;
   width: min-content;
   max-width: 40%;
   height: 40%;
@@ -112,7 +117,8 @@ body div.screen div.page.heroBanner div.section.heroBanner div.container.illustr
   height: 75%;
 }
 body div.screen div.page.heroBanner div.section.heroBanner div.container.illustration img, html div.screen div.page.heroBanner div.section.heroBanner div.container.illustration img {
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 body div.screen div.page.heroBanner div.section.presentation, html div.screen div.page.heroBanner div.section.presentation {
   border-top: solid 1px var(--text-color);
@@ -125,9 +131,13 @@ body div.screen div.page.heroBanner div.section.presentation div.container.bento
   width: 90%;
   height: 85%;
 }
+body div.screen div.page.heroBanner div.section.presentation div.container.bento:has(div.box:hover) > div.box:not(:hover) div.overlay, html div.screen div.page.heroBanner div.section.presentation div.container.bento:has(div.box:hover) > div.box:not(:hover) div.overlay {
+  opacity: 1;
+}
 body div.screen div.page.heroBanner div.section.presentation div.container.bento div.box, html div.screen div.page.heroBanner div.section.presentation div.container.bento div.box {
   border-radius: var(--border-radius-medium);
   background-color: var(--secondary-color);
+  transition: transform var(--soft-animation-delay) ease-in-out;
 }
 body div.screen div.page.heroBanner div.section.presentation div.container.bento div.box.one, html div.screen div.page.heroBanner div.section.presentation div.container.bento div.box.one {
   grid-column: 1/3;
@@ -145,3 +155,12 @@ body div.screen div.page.heroBanner div.section.presentation div.container.bento
   grid-column: 2/4;
   grid-row: 2;
 }
+body div.screen div.page.heroBanner div.section.presentation div.container.bento div.box div.overlay, html div.screen div.page.heroBanner div.section.presentation div.container.bento div.box div.overlay {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--soft-animation-delay) ease-in-out;
+}/*# sourceMappingURL=heroBanner.css.map */
