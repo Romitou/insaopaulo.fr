@@ -1,0 +1,147 @@
+body div.screen div.page.heroBanner div.section.heroBanner div.container.header, html div.screen div.page.heroBanner div.section.heroBanner div.container.header {
+  top: 2.5%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 7.5%;
+  border-radius: var(--border-radius-medium);
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--header-color);
+}
+body div.screen div.page.heroBanner div.section.heroBanner div.container.header div.logo, html div.screen div.page.heroBanner div.section.heroBanner div.container.header div.logo {
+  height: 90%;
+  aspect-ratio: 1/1;
+  margin-left: var(--border-radius-medium);
+}
+body div.screen div.page.heroBanner div.section.heroBanner div.container.header div.logo img, html div.screen div.page.heroBanner div.section.heroBanner div.container.header div.logo img {
+  object-fit: contain;
+}
+body div.screen div.page.heroBanner div.section.heroBanner div.container.header div.tabs, html div.screen div.page.heroBanner div.section.heroBanner div.container.header div.tabs {
+  position: absolute;
+  top: 50%;
+  right: calc(var(--border-radius-medium) + 10%);
+  transform: translateY(-50%);
+  width: 12.5%;
+  height: 90%;
+  justify-content: space-between;
+  align-items: center;
+}
+body div.screen div.page.heroBanner div.section.heroBanner div.container.header div.tabs p.tab, html div.screen div.page.heroBanner div.section.heroBanner div.container.header div.tabs p.tab {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration var(--soft-animation-delay) ease-in-out;
+}
+body div.screen div.page.heroBanner div.section.heroBanner div.container.header div.tabs p.tab:hover, html div.screen div.page.heroBanner div.section.heroBanner div.container.header div.tabs p.tab:hover {
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--accent-color);
+}
+body div.screen div.page.heroBanner div.section.heroBanner div.container.header div#darkmode, html div.screen div.page.heroBanner div.section.heroBanner div.container.header div#darkmode {
+  height: 65%;
+  aspect-ratio: 1/1;
+  margin-right: var(--border-radius-medium);
+  transition: transform var(--soft-animation-delay) ease-in-out;
+}
+body div.screen div.page.heroBanner div.section.heroBanner div.container.header div#darkmode:hover, html div.screen div.page.heroBanner div.section.heroBanner div.container.header div#darkmode:hover {
+  transform: rotate(90deg);
+}
+body div.screen div.page.heroBanner div.section.heroBanner div.container.header div#darkmode svg, html div.screen div.page.heroBanner div.section.heroBanner div.container.header div#darkmode svg {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  transition: opacity var(--soft-animation-delay) ease-in-out;
+}
+body div.screen div.page.heroBanner div.section.heroBanner div.container.presentation, html div.screen div.page.heroBanner div.section.heroBanner div.container.presentation {
+  flex-direction: column;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  width: min-content;
+  max-width: 40%;
+  height: 40%;
+  justify-content: space-between;
+}
+body div.screen div.page.heroBanner div.section.heroBanner div.container.presentation h1, html div.screen div.page.heroBanner div.section.heroBanner div.container.presentation h1 {
+  flex-wrap: wrap;
+  max-width: 100%;
+  justify-content: flex-start;
+}
+body div.screen div.page.heroBanner div.section.heroBanner div.container.presentation h1 span.accent, html div.screen div.page.heroBanner div.section.heroBanner div.container.presentation h1 span.accent {
+  background: -webkit-linear-gradient(var(--text-color), var(--primary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-right: 1rem;
+}
+body div.screen div.page.heroBanner div.section.heroBanner div.container.presentation div.cta, html div.screen div.page.heroBanner div.section.heroBanner div.container.presentation div.cta {
+  display: flex;
+  position: relative;
+  width: 75%;
+  height: 20%;
+  justify-content: space-between;
+}
+body div.screen div.page.heroBanner div.section.heroBanner div.container.presentation div.cta div.action, html div.screen div.page.heroBanner div.section.heroBanner div.container.presentation div.cta div.action {
+  display: flex;
+  position: relative;
+  width: 47.5%;
+  height: 100%;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  border-radius: var(--border-radius-light);
+  transition: all var(--soft-animation-delay) ease-in-out;
+}
+body div.screen div.page.heroBanner div.section.heroBanner div.container.presentation div.cta div.action:hover, html div.screen div.page.heroBanner div.section.heroBanner div.container.presentation div.cta div.action:hover {
+  transform: translateY(-5%);
+  box-shadow: 0 5px 5px var(--text-color);
+}
+body div.screen div.page.heroBanner div.section.heroBanner div.container.presentation div.cta div.action:nth-child(1), html div.screen div.page.heroBanner div.section.heroBanner div.container.presentation div.cta div.action:nth-child(1) {
+  background-color: var(--primary-color);
+}
+body div.screen div.page.heroBanner div.section.heroBanner div.container.presentation div.cta div.action:nth-child(1) p, html div.screen div.page.heroBanner div.section.heroBanner div.container.presentation div.cta div.action:nth-child(1) p {
+  color: var(--background-color);
+}
+body div.screen div.page.heroBanner div.section.heroBanner div.container.illustration, html div.screen div.page.heroBanner div.section.heroBanner div.container.illustration {
+  top: 50%;
+  left: unset;
+  right: 10%;
+  transform: translateY(-50%);
+  width: 30%;
+  height: 75%;
+}
+body div.screen div.page.heroBanner div.section.heroBanner div.container.illustration img, html div.screen div.page.heroBanner div.section.heroBanner div.container.illustration img {
+  object-fit: contain;
+}
+body div.screen div.page.heroBanner div.section.presentation, html div.screen div.page.heroBanner div.section.presentation {
+  border-top: solid 1px var(--text-color);
+}
+body div.screen div.page.heroBanner div.section.presentation div.container.bento, html div.screen div.page.heroBanner div.section.presentation div.container.bento {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  grid-auto-rows: minmax(100px, auto);
+  width: 90%;
+  height: 85%;
+}
+body div.screen div.page.heroBanner div.section.presentation div.container.bento div.box, html div.screen div.page.heroBanner div.section.presentation div.container.bento div.box {
+  border-radius: var(--border-radius-medium);
+  background-color: var(--secondary-color);
+}
+body div.screen div.page.heroBanner div.section.presentation div.container.bento div.box.one, html div.screen div.page.heroBanner div.section.presentation div.container.bento div.box.one {
+  grid-column: 1/3;
+  grid-row: 1;
+}
+body div.screen div.page.heroBanner div.section.presentation div.container.bento div.box.two, html div.screen div.page.heroBanner div.section.presentation div.container.bento div.box.two {
+  grid-column: 3;
+  grid-row: 1;
+}
+body div.screen div.page.heroBanner div.section.presentation div.container.bento div.box.three, html div.screen div.page.heroBanner div.section.presentation div.container.bento div.box.three {
+  grid-column: 1;
+  grid-row: 2;
+}
+body div.screen div.page.heroBanner div.section.presentation div.container.bento div.box.four, html div.screen div.page.heroBanner div.section.presentation div.container.bento div.box.four {
+  grid-column: 2/4;
+  grid-row: 2;
+}
