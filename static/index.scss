@@ -1,0 +1,105 @@
+* {
+    transition: background-color var(--soft-animation-delay) ease-in-out, color var(--soft-animation-delay) ease-in-out;
+}
+
+p, h1, h2, h3, span{
+    display: flex;
+    color: var(--text-color);
+    font-size: 1rem;
+    font-family: var(--heading-font-style);
+    margin: 0;
+    padding: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    cursor: text;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    height: max-content;
+}
+
+h1, span{
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+h2{
+    font-size: 3rem;
+}
+
+h3{
+    font-size: 2rem;
+}
+
+img{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    user-select: none;
+    pointer-events: none;
+}
+
+div{
+    display: flex;
+    position: relative;
+}
+
+body, html{
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    cursor: default;
+    opacity: 0;
+    background-color: var(--background-color);
+    touch-action: pan-y;
+    div.screen{
+        position: absolute;
+        flex-direction: column;
+        width: 100vw;
+        height: 100dvh;
+        background-color: var(--background-color);
+        overflow-y: hidden;
+        transition: all var(--soft-animation-delay);
+        div.page{
+            position: absolute;
+            flex-direction: column;
+            top: 100vh;
+            width: 100vw;
+            height: 100vh;
+            z-index: 1;
+            overflow-x: hidden;
+            overflow-y: auto;
+            transition: top var(--screen-animation-delay) ease-in-out,
+                        background-color var(--soft-animation-delay) ease-in-out, 
+                        color var(--soft-animation-delay) ease-in-out;
+            &.active{
+                top: 0;
+                z-index: 2;
+            }
+            &:has(div.section.footer){
+                div.section:nth-last-child(2){
+                    min-height: 92.5vh;
+                }
+            }
+            div.section{
+                width: 100vw;
+                min-height: 100vh;
+                &.footer{
+                    min-height: 7.5vh;
+                }
+                div.container{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+    }
+}
