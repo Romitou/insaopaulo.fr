@@ -1,0 +1,17 @@
+# OS
+.DS_Store
+
+# Node
+node_modules
+.output
+.nuxt
+.nitro
+dist
+
+# Env
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
