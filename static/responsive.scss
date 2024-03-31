@@ -33,6 +33,9 @@
 @media screen and (width < 900px) {
     body, html{ div.screen{ div.page{ &.heroBanner{ div.section{ div.container{
         &.header{
+            div.banner{
+                aspect-ratio: 2 / 1 !important;
+            }
             div.tabs{
                 left: 50%;
                 right: unset !important;
@@ -78,6 +81,9 @@
 @media screen and (width < 500px) {
     body, html{ div.screen{ div.page{ &.heroBanner{ div.section{ div.container{
         &.header{
+            div.banner{
+                aspect-ratio: 1 / 1 !important;
+            }
             div.tabs{
                 width: 40% !important;
             }
