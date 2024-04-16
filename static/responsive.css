@@ -17,8 +17,31 @@
   }
 }
 @media screen and (width < 1000px) {
-  body div.screen div.page.heroBanner div.section div.container.presentation, html div.screen div.page.heroBanner div.section div.container.presentation {
+  body div.screen div.page.heroBanner div.section.heroBanner div.container.presentation, html div.screen div.page.heroBanner div.section.heroBanner div.container.presentation {
     height: 30% !important;
+  }
+  body div.screen div.page.heroBanner div.section.presentation, html div.screen div.page.heroBanner div.section.presentation {
+    min-height: 125vh !important;
+  }
+  body div.screen div.page.heroBanner div.section.presentation div.container.bento, html div.screen div.page.heroBanner div.section.presentation div.container.bento {
+    height: 95% !important;
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  body div.screen div.page.heroBanner div.section.presentation div.container.bento div.box.one, html div.screen div.page.heroBanner div.section.presentation div.container.bento div.box.one {
+    grid-column: 1/1 !important;
+    grid-row: 1 !important;
+  }
+  body div.screen div.page.heroBanner div.section.presentation div.container.bento div.box.two, html div.screen div.page.heroBanner div.section.presentation div.container.bento div.box.two {
+    grid-column: 1/1 !important;
+    grid-row: 2 !important;
+  }
+  body div.screen div.page.heroBanner div.section.presentation div.container.bento div.box.three, html div.screen div.page.heroBanner div.section.presentation div.container.bento div.box.three {
+    grid-column: 1/1 !important;
+    grid-row: 3 !important;
+  }
+  body div.screen div.page.heroBanner div.section.presentation div.container.bento div.box.four, html div.screen div.page.heroBanner div.section.presentation div.container.bento div.box.four {
+    grid-column: 1/1 !important;
+    grid-row: 4 !important;
   }
 }
 @media screen and (width < 900px) {
