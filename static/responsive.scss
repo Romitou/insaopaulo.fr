@@ -23,11 +23,42 @@
 }
 
 @media screen and (width < 1000px) {
-    body, html{ div.screen{ div.page{ &.heroBanner{ div.section{ div.container{
-        &.presentation{
-            height: 30% !important;
+    body, html{ div.screen{ div.page{ &.heroBanner{ 
+        div.section{ 
+            &.heroBanner{
+                div.container{
+                    &.presentation{
+                        height: 30% !important;
+                    }
+                }
+            }
+            &.presentation{
+                min-height: 125vh !important;
+                div.container.bento{
+                    height: 95% !important;
+                    grid-template-columns: repeat(1, 1fr) !important;
+                    div.box{
+                        &.one{
+                            grid-column: 1 / 1 !important;
+                            grid-row: 1 !important;
+                        }
+                        &.two{
+                            grid-column: 1 / 1 !important;
+                            grid-row: 2 !important;
+                        }
+                        &.three{
+                            grid-column: 1 / 1 !important;
+                            grid-row: 3 !important;
+                        }
+                        &.four{
+                            grid-column: 1 / 1 !important;
+                            grid-row: 4 !important;
+                        }
+                    }
+                }
+            }
         }
-    }}}}}}
+    }}}}
 }
 
 @media screen and (width < 900px) {
