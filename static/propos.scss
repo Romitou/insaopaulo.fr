@@ -1,0 +1,42 @@
+body, html{ div.screen{ div.page{ &.propos{ 
+    div.section{
+        &.propos{
+            img#closePropos{
+                top: 2rem;
+                left: unset;
+                right: 2rem;
+                transform: unset;
+                width: 2rem;
+                height: unset;
+                aspect-ratio: 1 / 1;
+                filter: var(--filter);
+                transition: transform var(--soft-animation-delay) ease-in-out;
+                pointer-events: unset;
+                &:hover{
+                    transform: scale(1.2);
+                }
+            }
+            h1{
+                position: absolute;
+                bottom: calc(40% + 25% + 10%);
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 4vw;
+            }
+            div.container{
+                &.wrapper{
+                    top: 60%;
+                    width: 50%;
+                    height: 50%;
+                    justify-content: space-between;
+                    div.card{
+                        width: 40%;
+                        height: 100%;
+                        border-radius: var(--border-radius-medium);
+                        background-color: green;
+                    }
+                }
+            }
+        }
+    }
+} } } }

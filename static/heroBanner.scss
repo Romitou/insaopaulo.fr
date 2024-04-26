@@ -56,6 +56,7 @@ body, html{ div.screen{ div.page{ &.heroBanner{
                                 width: 100%;
                                 height: 100%;
                                 transition: opacity var(--soft-animation-delay) ease-in-out;
+                                filter: var(--filter);
                             }
                         }
                     }
@@ -106,6 +107,9 @@ body, html{ div.screen{ div.page{ &.heroBanner{
                                     }
                                 }
                                 &:nth-child(2){
+                                }
+                                svg{
+                                    filter: var(--filter);
                                 }
                             }
                         }
