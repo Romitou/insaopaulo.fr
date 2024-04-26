@@ -1,0 +1,19 @@
+body div.screen div.page.propos div.section.propos h1, html div.screen div.page.propos div.section.propos h1 {
+  position: absolute;
+  bottom: 75%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 4vw;
+}
+body div.screen div.page.propos div.section.propos div.container.wrapper, html div.screen div.page.propos div.section.propos div.container.wrapper {
+  top: 60%;
+  width: 50%;
+  height: 50%;
+  justify-content: space-between;
+}
+body div.screen div.page.propos div.section.propos div.container.wrapper div.card, html div.screen div.page.propos div.section.propos div.container.wrapper div.card {
+  width: 40%;
+  height: 100%;
+  border-radius: var(--border-radius-medium);
+  background-color: green;
+}/*# sourceMappingURL=propos.css.map */

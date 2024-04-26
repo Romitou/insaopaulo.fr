@@ -13,8 +13,10 @@
     <p style="z-index: 99; position: fixed; bottom: 2.5%; right: 2.5%; font-size: 0.75rem; cursor: pointer;" onclick="location.href='mailto: hugoleroifacquet@gmail.com?subject=Integr-INSA'">© - Hugo Leroi--Facquet</p>
     <div id="mainScreen" class="screen">
         <div data-include="heroBanner" id = 'heroBanner' class = 'page heroBanner active'></div>
+        <div data-include="propos" id = 'propos' class = 'page propos'></div>
     </div>
     <script src="{{ url_for('static', filename='importScript.js') }}"></script>
+    <script src="{{ url_for('static', filename='page.js') }}"></script>
     <script src="{{ url_for('static', filename='heroBanner.js') }}"></script>
     <script src="{{ url_for('static', filename='darkMode.js') }}"></script>
     <script>

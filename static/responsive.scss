@@ -1,11 +1,30 @@
 @media screen and (aspect-ratio < 16/9) {
-    body, html{ div.screen{ div.page{ &.heroBanner{ div.section{ div.container{
-        &.header{
-            top: unset !important;
-            width: 100% !important;
-            border-radius: unset !important;
-        }
-    }}}}}}
+    body, html{ div.screen{ div.page{ 
+        &.heroBanner{ div.section{ div.container{
+            &.header{
+                top: unset !important;
+                width: 100% !important;
+                border-radius: unset !important;
+            }
+        }}}
+        &.propos{ div.section{ 
+            h1{
+                bottom: calc(40% + 35% + 10%) !important;
+                font-size: 6vw;
+            }
+            div.container{
+            &.wrapper{
+                flex-direction: column !important;
+                align-items: center;
+                width: 90% !important;
+                height: 65% !important;
+                div.card{
+                    width: 100% !important;
+                    height: 45% !important;
+                }
+            }
+        }}}
+    }}}
 }
 
 @media screen and (width < 1600px) {

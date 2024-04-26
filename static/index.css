@@ -78,14 +78,14 @@ body div.screen div.page, html div.screen div.page {
   top: 100vh;
   width: 100vw;
   height: 100vh;
-  z-index: 1;
+  z-index: 2;
   overflow-x: hidden;
   overflow-y: auto;
+  background-color: var(--background-color);
   transition: top var(--screen-animation-delay) ease-in-out, background-color var(--soft-animation-delay) ease-in-out, color var(--soft-animation-delay) ease-in-out;
 }
 body div.screen div.page.active, html div.screen div.page.active {
   top: 0;
-  z-index: 2;
 }
 body div.screen div.page:has(div.section.footer) div.section:nth-last-child(2), html div.screen div.page:has(div.section.footer) div.section:nth-last-child(2) {
   min-height: 92.5vh;

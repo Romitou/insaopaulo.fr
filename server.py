@@ -10,4 +10,8 @@ def index() -> str:
 def heroBanner() -> str:
     return render_template('heroBanner.html')
 
+@app.route('/propos')
+def propos() -> str:
+    return render_template('propos.html')
+
 app.run(host="0.0.0.0", debug=False, port=2024)
