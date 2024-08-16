@@ -18,4 +18,16 @@
     --screen-animation-delay: 1000ms;
     --border-radius-light: 16px;
     --border-radius-medium: 24px;
+    --filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(189deg) brightness(103%) contrast(106%);
+}
+
+:root[data-theme="dark"]{
+    --background-color: #010104;
+    --primary-color: #68D63C;
+    --secondary-color: #5EC5C0;
+    --accent-color: #D1E537;
+    --text-color: #eae9fc;
+    --text-color-30: #eae9fc60;
+    --header-color: #1c1c1c;
+    --filter: invert(97%) sepia(5%) saturate(224%) hue-rotate(112deg) brightness(113%) contrast(100%);
 }
