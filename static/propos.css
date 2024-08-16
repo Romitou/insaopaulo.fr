@@ -1,18 +1,3 @@
-body div.screen div.page.propos div.section.propos img#closePropos, html div.screen div.page.propos div.section.propos img#closePropos {
-  top: 2rem;
-  left: unset;
-  right: 2rem;
-  transform: unset;
-  width: 2rem;
-  height: unset;
-  aspect-ratio: 1/1;
-  filter: var(--filter);
-  transition: transform var(--soft-animation-delay) ease-in-out;
-  pointer-events: unset;
-}
-body div.screen div.page.propos div.section.propos img#closePropos:hover, html div.screen div.page.propos div.section.propos img#closePropos:hover {
-  transform: scale(1.2);
-}
 body div.screen div.page.propos div.section.propos h1, html div.screen div.page.propos div.section.propos h1 {
   position: absolute;
   bottom: 75%;
