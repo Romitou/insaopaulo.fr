@@ -1,15 +1,39 @@
+# Nuxt 3 Minimal Starter
 
-# integr-INS-ao-Paulo
+Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-The purpose of this project is to create a web dev platform for the integration week of the INSA Rouen Normandie for september 2024.
+## Setup
 
+Make sure to install the dependencies:
 
-## Authors
+```bash
+# npm
+npm install
+```
 
-- [@spots727](https://www.github.com/spots727)
+## Development Server
 
+Start the development server on `http://localhost:3000`:
 
-## Documentation
+```bash
+# npm
+npm run dev
+```
 
-This website provides all the informations for that integration, a ranking page for the differents families of this year and a sponsorship page to help students to find help during this hard year of 1st year of higher education.
+## Production
 
+Build the application for production:
+
+```bash
+# npm
+npm run build
+```
+
+Locally preview production build:
+
+```bash
+# npm
+npm run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
