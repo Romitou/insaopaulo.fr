@@ -18,7 +18,7 @@
           </div>
         </div>
         <div class="container">
-          abc
+          <p>{{ families }}</p>
         </div>
       </div>
       <div class="section footer"></div>
@@ -26,6 +26,8 @@
 </template>
 <script setup>
 import {runColorMode, setDarkMode, unsetDarkMode, toggleDarkMode} from '~/assets/darkMode.js'
+
+const families = await $fetch('/api/families');
 
 onMounted(() => {
   runColorMode((isDarkMode) => {
@@ -36,8 +38,4 @@ onMounted(() => {
     }
   })
 })
-
-function goToSection (page, section) {
-  document.querySelector('div.page.'+page).scrollTo({top: document.querySelector('div.section.'+section).clientHeight, behavior: 'smooth',});
-}
 </script>

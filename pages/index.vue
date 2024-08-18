@@ -1,6 +1,9 @@
 <script setup>
 import {runColorMode, setDarkMode, unsetDarkMode, toggleDarkMode} from '~/assets/darkMode.js'
 
+const events = await $fetch('/api/events');
+const news = await $fetch('/api/news');
+
 onMounted(() => {
   runColorMode((isDarkMode) => {
     if (isDarkMode) {
