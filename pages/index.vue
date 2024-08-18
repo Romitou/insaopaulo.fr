@@ -25,8 +25,10 @@ function goToSection (page, section) {
             <img src="~/assets/images/banner.jpg">
           </div>
           <div class="tabs">
-            <p class="tab" v-on:click="goToSection('heroBanner', 'presentation')">Infos</p>
-            <p class="tab" onclick="activePage('propos')">A propos</p>
+            <p class="tab" v-on:click="goToSection('heroBanner', 'presentation')">Actualités</p>
+            <NuxtLink to="/familles">
+              <p class="tab">Familles</p>
+            </NuxtLink>
           </div>
           <div id="darkmode" v-on:click="toggleDarkMode()">
             <svg id="light" style="opacity: 0;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
@@ -63,15 +65,4 @@ function goToSection (page, section) {
       </div>
       <div class="section footer"></div>
     </div>
-    <div data-include="propos" id = 'propos' class = 'page propos'>
-      <div class="section propos">
-        <img id="closePropos" onclick="activePage('propos')" src="~/assets/images/close.png" alt="Close image">
-        <h1>Créateurs du site</h1>
-        <div class="container wrapper">
-          <div class="card"></div>
-          <div class="card"></div>
-        </div>
-      </div>
-    </div>
-
 </template>
