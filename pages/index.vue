@@ -1,3 +1,21 @@
+<script setup>
+import {runColorMode, setDarkMode, unsetDarkMode, toggleDarkMode} from '~/assets/darkMode.js'
+
+onMounted(() => {
+  runColorMode((isDarkMode) => {
+    if (isDarkMode) {
+      setDarkMode();
+    } else {
+      unsetDarkMode();
+    }
+  })
+})
+
+function goToSection (page, section) {
+  document.querySelector('div.page.'+page).scrollTo({top: document.querySelector('div.section.'+section).clientHeight, behavior: 'smooth',});
+}
+</script>
+
 <template>
   <p style="z-index: 99; position: fixed; bottom: 2.5%; right: 2.5%; font-size: 0.75rem; cursor: pointer;" onclick="location.href='mailto: hugoleroifacquet@gmail.com?subject=Integr-INSA'">© - Hugo Leroi--Facquet</p>
     <div data-include="heroBanner" id = 'heroBanner' class = 'page heroBanner active'>
@@ -57,22 +75,3 @@
     </div>
 
 </template>
-<script setup>
-import '~/assets/page.js'
-import '~/assets/heroBanner.js'
-import {runColorMode, setDarkMode, unsetDarkMode, toggleDarkMode} from '~/assets/darkMode.js'
-
-onMounted(() => {
-  runColorMode((isDarkMode) => {
-    if (isDarkMode) {
-      setDarkMode();
-    } else {
-      unsetDarkMode();
-    }
-  })
-})
-
-function goToSection (page, section) {
-  document.querySelector('div.page.'+page).scrollTo({top: document.querySelector('div.section.'+section).clientHeight, behavior: 'smooth',});
-}
-</script>
