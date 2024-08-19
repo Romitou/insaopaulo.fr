@@ -29,7 +29,7 @@ function goToSection (page, section) {
           </div>
           <div class="tabs">
             <p class="tab" v-on:click="goToSection('heroBanner', 'presentation')">Actualités</p>
-            <NuxtLink to="/familles">
+            <NuxtLink to="/families">
               <p class="tab">Familles</p>
             </NuxtLink>
           </div>
