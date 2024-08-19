@@ -1,7 +1,6 @@
 import { defineEventHandler, setResponseHeader } from 'h3';
-import axios from 'axios';
 
-const cfHeaders = {
+export const cfHeaders = {
   'CF-Access-Client-Id': '2caa37f6eb1823e2a79331533603bb41.access',
   'CF-Access-Client-Secret': 'd91d489421934259bbd677d3457f4bf53914d2c9a381dde77c4d42a410d49a66'
 };

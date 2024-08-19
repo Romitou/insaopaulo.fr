@@ -1,26 +1,29 @@
 import {defineEventHandler} from 'h3';
-import {GoogleAuth} from 'google-auth-library';
-import {google} from 'googleapis';
+import {cfHeaders} from "~/server/api/news.js";
 
-const auth = new GoogleAuth({
-    credentials: {
-        type: "service_account",
-        project_id: "romitou",
-        private_key_id: process.env.GOOGLE_PRIVATE_KEY_ID,
-        private_key: atob(process.env.GOOGLE_PRIVATE_KEY),
-        client_email: "insaopaulo@romitou.iam.gserviceaccount.com",
-        client_id: "109946342061036145579",
-    },
-    scopes: 'https://www.googleapis.com/auth/spreadsheets',
-});
-const service = google.sheets({version: 'v4', auth});
 
 async function getValues(spreadsheetId, range) {
+    let token;
     try {
-        return await service.spreadsheets.values.get({
-            spreadsheetId,
-            range,
+        const response = await fetch('https://insaopaulo-auth.romitou.fr/token', { headers: cfHeaders });
+        if (!response || !response.ok) {
+            return null;
+        }
+        const data = await response.json();
+        token = data.access_token;
+    } catch (err) {
+        throw err;
+    }
+    try {
+        const response = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${range}`, {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
         });
+        if (!response || !response.ok) {
+            return null;
+        }
+        return await response.json();
     } catch (err) {
         throw err;
     }
@@ -35,10 +38,10 @@ export default defineEventHandler(async (event) => {
     const scoreResult = await getValues(spreadsheetId, scoreRange);
 
     const families = [];
-    for (let i = 1; i < nameResult.data.values[0].length; i++) {
+    for (let i = 1; i < nameResult.values[0].length; i++) {
         families.push({
-            name: nameResult.data.values[0][i],
-            score: scoreResult.data.values[0][i],
+            name: nameResult.values[0][i],
+            score: scoreResult.values[0][i],
         });
     }
 

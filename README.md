@@ -37,3 +37,11 @@ npm run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+### How to run token provider server
+Currently hosted at https://insaopaulo-auth.romitou.fr/token, but may be hosted by yourslef.
+```bash
+# Edit .env
+npm i
+npm start -- --port 8000 --host 127.0.0.1
+```
