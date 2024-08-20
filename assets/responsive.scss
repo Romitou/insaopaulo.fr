@@ -1,0 +1,159 @@
+@media screen and (aspect-ratio < 16/9) {
+    body, html{ div.screen{ div.page{ 
+        &.heroBanner{ div.section{ div.container{
+            &.header{
+                top: unset !important;
+                width: 100% !important;
+                border-radius: unset !important;
+            }
+        }}}
+        &.propos{ div.section{ 
+            h1{
+                bottom: calc(40% + 35% + 10%) !important;
+                font-size: 6vw;
+            }
+            div.container{
+            &.wrapper{
+                flex-direction: column !important;
+                align-items: center;
+                width: 90% !important;
+                height: 65% !important;
+                div.card{
+                    width: 100% !important;
+                    height: 45% !important;
+                }
+            }
+        }}}
+    }}}
+}
+
+@media screen and (width < 1600px) {
+    body, html{ div.screen{ div.page{ &.heroBanner{ div.section{ div.container{
+        &.presentation{
+            max-width: 30% !important;
+            h1, span{
+                font-size: 3vw;
+            }
+            p{
+                font-size: 1vw;
+            }
+        }
+    }}}}}}
+}
+
+@media screen and (width < 1000px) {
+    body, html{ div.screen{ div.page{ &.heroBanner{ 
+        div.section{ 
+            &.heroBanner{
+                div.container{
+                    &.presentation{
+                        height: 30% !important;
+                    }
+                }
+            }
+            &.presentation{
+                min-height: 125vh !important;
+                div.container.bento{
+                    height: 95% !important;
+                    grid-template-columns: repeat(1, 1fr) !important;
+                    div.box{
+                        &.one{
+                            grid-column: 1 / 1 !important;
+                            grid-row: 1 !important;
+                        }
+                        &.two{
+                            grid-column: 1 / 1 !important;
+                            grid-row: 2 !important;
+                        }
+                        &.three{
+                            grid-column: 1 / 1 !important;
+                            grid-row: 3 !important;
+                        }
+                        &.four{
+                            grid-column: 1 / 1 !important;
+                            grid-row: 4 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }}}}
+}
+
+@media screen and (width < 900px) {
+    body, html{ div.screen{ div.page{ &.heroBanner{ div.section{ div.container{
+        &.header{
+            div.banner{
+                aspect-ratio: 2 / 1 !important;
+            }
+            div.tabs{
+                left: 50%;
+                right: unset !important;
+                transform: translate(-50%, -50%) !important;
+                width: 30% !important;
+                margin: unset !important;
+            }
+        }
+    }}}}}}
+}
+
+@media screen and (width < 600px) {
+    body, html{ div.screen{ div.page{ &.heroBanner{ div.section{ div.container{
+        &.illustration{
+            top: 10% !important;
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+            width: 80% !important;
+            height: 30% !important;
+        }
+        &.presentation{
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+            max-width: 70% !important;
+            height: 40% !important;
+            h1, span{
+                font-size: 6vw !important;
+            }
+            p{
+                font-size: 2.5vw !important;
+                max-width: 100%;
+                br{
+                    display: none;
+                }
+            }
+            div.cta{
+                width: 100% !important;
+            }
+        }
+    }}}}}}
+}
+
+@media screen and (width < 500px) {
+    body, html{ div.screen{ div.page{ &.heroBanner{ div.section{ div.container{
+        &.header{
+            div.banner{
+                aspect-ratio: 1 / 1 !important;
+            }
+            div.tabs{
+                width: 40% !important;
+            }
+        }
+    }}}}}}
+}
+
+@media screen and (width < 400px) {
+    body, html{ div.screen{ div.page{ &.heroBanner{ div.section{ div.container{
+        &.presentation{
+            height: 30% !important;
+        }
+    }}}}}}
+}
+
+@media screen and ((width < 300px) or (aspect-ratio < 1 / 2)) {
+    body, html{ div.screen{ div.page{ &.heroBanner{ div.section{ div.container{
+        &.presentation{
+            top: 55% !important;
+            height: 25% !important;
+        }
+    }}}}}}
+}
