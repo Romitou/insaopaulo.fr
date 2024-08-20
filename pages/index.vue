@@ -44,8 +44,8 @@ function goToSection (page, section) {
             Faites connaissance avec la promo 2024.
           </p>
           <div class="cta">
-            <div class="action"><p>En savoir plus</p></div>
-            <div class="action" onclick="window.open(
+            <div class="action" v-on:click="goToSection('heroBanner', 'presentation')"><p>En savoir plus</p></div>
+            <div class="action" v-on:click="window.open(
                 'https://www.youtube.com/watch?v=C8HOnr5GoUY&pp=ygULaW5zYW8gcGF1bG8%3D',
                 '_blank'
               )">
