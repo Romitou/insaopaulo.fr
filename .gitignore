@@ -1,19 +1,35 @@
-# OS
-.DS_Store
-
-# Node
-node_modules
+# Nuxt dev/build outputs
 .output
+.data
 .nuxt
 .nitro
+.cache
 dist
 
-# Env
+# Node dependencies
+node_modules
+
+# Logs
+logs
+*.log
+
+# Misc & OS files
+.DS_Store
+.fleet
+.idea
+.vscode
+
+# Local env & credentials
 .env
 .env.*
 !.env.example
+gauthapi/.env
+gauthapi/.env.*
+!gauthapi/.env.example
+*.pem
+*.key
+*.cert
+*.crt
 
-# Logs
-*.log
-
+# Cloudflare Wrangler
 .wrangler
