@@ -1,3 +1,24 @@
+<script setup>
+import {runColorMode, setDarkMode, unsetDarkMode, toggleDarkMode} from '~/assets/darkMode.js'
+
+const events = await $fetch('/api/events');
+const news = await $fetch('/api/news');
+
+onMounted(() => {
+  runColorMode((isDarkMode) => {
+    if (isDarkMode) {
+      setDarkMode();
+    } else {
+      unsetDarkMode();
+    }
+  })
+})
+
+function goToSection (page, section) {
+  document.querySelector('div.page.'+page).scrollTo({top: document.querySelector('div.section.'+section).clientHeight, behavior: 'smooth',});
+}
+</script>
+
 <template>
   <p style="z-index: 99; position: fixed; bottom: 2.5%; right: 2.5%; font-size: 0.75rem; cursor: pointer;" onclick="location.href='mailto: hugoleroifacquet@gmail.com?subject=Integr-INSA'">© - Hugo Leroi--Facquet</p>
     <div data-include="heroBanner" id = 'heroBanner' class = 'page heroBanner active'>
@@ -7,8 +28,10 @@
             <img src="~/assets/images/banner.jpg">
           </div>
           <div class="tabs">
-            <p class="tab" v-on:click="goToSection('heroBanner', 'presentation')">Infos</p>
-            <p class="tab" onclick="activePage('propos')">A propos</p>
+            <p class="tab" v-on:click="goToSection('heroBanner', 'presentation')">Actualités</p>
+            <NuxtLink to="/families">
+              <p class="tab">Familles</p>
+            </NuxtLink>
           </div>
           <div id="darkmode" v-on:click="toggleDarkMode()">
             <svg id="light" style="opacity: 0;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
@@ -21,8 +44,8 @@
             Faites connaissance avec la promo 2024.
           </p>
           <div class="cta">
-            <div class="action"><p>En savoir plus</p></div>
-            <div class="action" onclick="window.open(
+            <div class="action" v-on:click="goToSection('heroBanner', 'presentation')"><p>En savoir plus</p></div>
+            <div class="action" v-on:click="window.open(
                 'https://www.youtube.com/watch?v=C8HOnr5GoUY&pp=ygULaW5zYW8gcGF1bG8%3D',
                 '_blank'
               )">
@@ -45,34 +68,4 @@
       </div>
       <div class="section footer"></div>
     </div>
-    <div data-include="propos" id = 'propos' class = 'page propos'>
-      <div class="section propos">
-        <img id="closePropos" onclick="activePage('propos')" src="~/assets/images/close.png" alt="Close image">
-        <h1>Créateurs du site</h1>
-        <div class="container wrapper">
-          <div class="card"></div>
-          <div class="card"></div>
-        </div>
-      </div>
-    </div>
-
 </template>
-<script setup>
-import '~/assets/page.js'
-import '~/assets/heroBanner.js'
-import {runColorMode, setDarkMode, unsetDarkMode, toggleDarkMode} from '~/assets/darkMode.js'
-
-onMounted(() => {
-  runColorMode((isDarkMode) => {
-    if (isDarkMode) {
-      setDarkMode();
-    } else {
-      unsetDarkMode();
-    }
-  })
-})
-
-function goToSection (page, section) {
-  document.querySelector('div.page.'+page).scrollTo({top: document.querySelector('div.section.'+section).clientHeight, behavior: 'smooth',});
-}
-</script>
